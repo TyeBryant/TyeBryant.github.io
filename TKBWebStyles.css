@@ -1,0 +1,121 @@
+body
+{
+	background: #223344;
+	width: 100vw;
+	height: 100vh;
+	margin: 0;
+	font-size: 25px;
+}
+
+h1
+{
+	color: #EDC12A;
+	font-size: 1.5em;
+}
+
+.constructionText
+{
+	color: #EDC12A;
+	font-size: 8rem;
+	text-align: center;
+}
+
+.pageTitle
+{
+	width: 10%;
+	height: 100%;
+	padding: 0.25rem 1rem;
+}
+
+.mainContent
+{
+	position: fixed;
+	/*background: #FFFFFF;*/
+	left: 23vh;
+	/*max-width: 88.3%;*/
+	max-width: 60%;
+	width: 88.3vw;
+	height: 93vh;
+	overflow: hidden;
+/*	padding: 10px;*/
+}
+
+.bar
+{
+	background: #000000;
+}
+
+.top
+{
+	height: 7vh;
+	width: 100vw;
+	min-height: 50px;
+	max-height: 70px;
+}
+
+.topNav
+{
+	padding: 0 1vw;
+	width: 90%;
+	height: 100%;
+}
+
+.topNavBtn
+{
+	margin: 0 1vw;
+	float: right;
+	min-height: 30px;
+	height: 40%;
+	min-width: 40px;
+	overflow: hidden;
+	padding: 0 1rem;
+}
+
+.side
+{
+	min-width: 130px;
+	max-width: 30vw;
+	width: 23vh;
+	max-height: 100vh;
+	height: 100vh;
+	overflow: hidden;
+	position: fixed;
+}
+
+.sideImage
+{
+	max-height: 13vh;
+	height: 13vh;
+	width: 100%;
+	border-radius: 10%;
+	border: 2px solid #444444;
+}
+
+.sideBtn
+{
+	margin-top: 0.4vh;
+}
+
+.animIn
+{
+	animation: moveIn 2s;
+	width: 0%;
+}
+
+.animOut
+{
+	animation: moveOut 5s;
+	width: 20%
+}
+
+@keyframes moveOut
+{
+	from {width: 0vw;}
+	to {width: 26.55vh;}
+}
+
+@keyframes moveIn
+{
+	from {width: 100%;}
+	to {width: 0vw;}
+}
