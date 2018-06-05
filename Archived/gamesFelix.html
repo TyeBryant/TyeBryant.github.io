@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>TyeKBryant</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+	<link href="vendor/bootstrap/css/bootstrap-grid.min.css" rel="stylesheet">
+	
+	<link href="vendor/bootstrap/css/bootstrap.css" rel="stylesheet">
+	<link href="vendor/bootstrap/css/bootstrap-grid.css" rel="stylesheet">
+	
+    <!-- Custom styles for this template -->
+    <link href="css/simple-sidebar.css" rel="stylesheet">
+
+	<!-- Game Stuff -->
+	<link rel="shortcut icon" href="Games/Felix/TemplateData/favicon.ico">
+    <link rel="stylesheet" href="Games/Felix/TemplateData/style.css">
+    <script src="Games/Felix/TemplateData/UnityProgress.js"></script>  
+    <script src="Games/Felix/Build/UnityLoader.js"></script>
+    <script>
+      var gameInstance = UnityLoader.instantiate("gameContainer", "Games/Felix/Build/Felix.json", {onProgress: UnityProgress});
+    </script>
+</head>
+
+<body>
+
+    <div id="wrapper">
+
+        <!-- Sidebar -->
+        <div id="sidebar-wrapper">
+            <ul class="sidebar-nav">
+                <li class="sidebar-brand">
+                    <a href="index">
+                        Brief Introduction
+                    </a>
+                </li>
+                <li>
+                    <a href="about">About Me</a>
+                </li>
+                <li>
+                    <a href="socialM">Social Media</a>
+                </li>
+                <li>
+                    <a href="blog">Blog</a>
+                </li>
+                <li>
+                    <a href="gamesPage">Games</a>
+                </li>
+            </ul>
+        </div>
+        <!-- /#sidebar-wrapper -->
+
+        <!-- Page Content -->
+        <div id="page-content-wrapper">
+            <div class="container-fluid">
+				<table height="100%">
+					<tr>
+						<td width="20%" style="position:relative; top:0px;">
+						<image src="/images/Profile.PNG" alt="Profile Picture" style="width:100%; height:20%;">
+						</td>
+						<td width="75%" style="background-color:#CCCCCC; position:absolute; top:30px;">
+							<table>
+								<tr>
+									<td>
+										<h1>Tye K. Bryant</h1>
+										<p>Felix the firefly is flying around a train station, collecting light so that he can grow his own light in the hope of attracting a mate.</p>
+										<p>Available at: <a href="https://tyebryant.itch.io/firefly">https://tyebryant.itch.io/firefly</a></p>
+										<div class="webgl-content" style="position:relative; top:320px;">
+											<div id="gameContainer" style="width: 960px; height: 600px"></div>
+											<div class="footer">
+											<div class="webgl-logo"></div>
+											<div class="fullscreen" onclick="gameInstance.SetFullscreen(1)"></div>
+											<div class="title">Felix the Firefly</div>
+										</div>
+									</td>
+								</tr>
+							</table>
+						</td>
+					</tr>
+				</table>
+                <a href="#menu-toggle" class="btn btn-secondary" id="menu-toggle" style="color:#000000; background-color:#CCCCCC">Toggle NavMenu</a>
+            </div>
+        </div>
+        <!-- /#page-content-wrapper -->
+
+    </div>
+    <!-- /#wrapper -->
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/popper/popper.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+
+    <!-- Menu Toggle Script -->
+    <script>
+    $("#menu-toggle").click(function(e) {
+        e.preventDefault();
+        $("#wrapper").toggleClass("toggled");
+    });
+    </script>
+
+</body>
+
+</html>

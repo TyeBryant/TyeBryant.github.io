@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>TyeKBryant</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+	<link href="vendor/bootstrap/css/bootstrap-grid.min.css" rel="stylesheet">
+	
+	<link href="vendor/bootstrap/css/bootstrap.css" rel="stylesheet">
+	<link href="vendor/bootstrap/css/bootstrap-grid.css" rel="stylesheet">
+	
+    <!-- Custom styles for this template -->
+    <link href="css/simple-sidebar.css" rel="stylesheet">
+
+	<!-- Game Stuff -->
+	<link rel="shortcut icon" href="Games/GM/TemplateData/favicon.ico">
+    <link rel="stylesheet" href="Games/GM/TemplateData/style.css">
+    <script src="Games/GM/TemplateData/UnityProgress.js"></script>  
+    <script src="Games/GM/Build/UnityLoader.js"></script>
+    <script>
+      var gameInstance = UnityLoader.instantiate("gameContainer", "Games/GM/Build/GM.json", {onProgress: UnityProgress});
+    </script>
+</head>
+
+<body>
+
+    <div id="wrapper">
+
+        <!-- Sidebar -->
+        <div id="sidebar-wrapper">
+            <ul class="sidebar-nav">
+                <li class="sidebar-brand">
+                    <a href="index">
+                        Brief Introduction
+                    </a>
+                </li>
+                <li>
+                    <a href="about">About Me</a>
+                </li>
+                <li>
+                    <a href="socialM">Social Media</a>
+                </li>
+                <li>
+                    <a href="blog">Blog</a>
+                </li>
+                <li>
+                    <a href="gamesPage">Games</a>
+                </li>
+            </ul>
+        </div>
+        <!-- /#sidebar-wrapper -->
+
+        <!-- Page Content -->
+        <div id="page-content-wrapper">
+            <div class="container-fluid">
+				<table height="100%">
+					<tr>
+						<td width="20%" style="position:relative; top:0px;">
+						<image src="/images/Profile.PNG" alt="Profile Picture" style="width:100%; height:20%;">
+						</td>
+						<td width="75%" style="background-color:#CCCCCC; position:absolute; top:30px;">
+							<table>
+								<tr>
+									<td>
+										<h1>Tye K. Bryant</h1>
+										<p>Everybody has their morning routine, it seems almost impossible to start your day without one. Good Morning is all about what you do before you face the world for the day. It aims to nail the aesthetic of early morning, roughly 7AM, using bright and orange colours to put you in that mental timestate so you really feel like this is really you preparing for the day. That game offers a sweet nostalgic feeling by letting the player complete their morning tasks step-by-step, like taking a shower or making some coffee. Good Morning wants you feel like you're in your home doing your thing.
+										</p>
+										<p>Available at: <a href="https://levistenton.itch.io/good-morning">https://levistenton.itch.io/good-morning</a></p>
+										<div class="webgl-content" style="position:relative; top:320px;">
+											<div id="gameContainer" style="width: 960px; height: 600px"></div>
+											<div class="footer">
+											<div class="webgl-logo"></div>
+											<div class="fullscreen" onclick="gameInstance.SetFullscreen(1)"></div>
+											<div class="title">Good Morning</div>
+										</div>
+									</td>
+								</tr>
+							</table>
+						</td>
+					</tr>
+				</table>
+                <a href="#menu-toggle" class="btn btn-secondary" id="menu-toggle" style="color:#000000; background-color:#CCCCCC">Toggle NavMenu</a>
+            </div>
+        </div>
+        <!-- /#page-content-wrapper -->
+
+    </div>
+    <!-- /#wrapper -->
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/popper/popper.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+
+    <!-- Menu Toggle Script -->
+    <script>
+    $("#menu-toggle").click(function(e) {
+        e.preventDefault();
+        $("#wrapper").toggleClass("toggled");
+    });
+    </script>
+
+</body>
+
+</html>

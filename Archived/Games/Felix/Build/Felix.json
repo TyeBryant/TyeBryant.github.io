@@ -1,0 +1,9 @@
+{
+"TOTAL_MEMORY": 268435456,
+"dataUrl": "Felix.data.unityweb",
+"asmCodeUrl": "Felix.asm.code.unityweb",
+"asmMemoryUrl": "Felix.asm.memory.unityweb",
+"asmFrameworkUrl": "Felix.asm.framework.unityweb",
+"splashScreenStyle": "Dark",
+"backgroundColor": "#222C36"
+}

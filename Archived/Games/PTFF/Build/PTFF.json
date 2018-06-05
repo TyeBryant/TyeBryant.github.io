@@ -1,0 +1,9 @@
+{
+"TOTAL_MEMORY": 268435456,
+"dataUrl": "PTFF.data.unityweb",
+"asmCodeUrl": "PTFF.asm.code.unityweb",
+"asmMemoryUrl": "PTFF.asm.memory.unityweb",
+"asmFrameworkUrl": "PTFF.asm.framework.unityweb",
+"splashScreenStyle": "Dark",
+"backgroundColor": "#222C36"
+}
