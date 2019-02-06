@@ -4,48 +4,154 @@
 	<title>TKBWeb</title>
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
 	<link rel="stylesheet" type="text/css" href="TKBWebStyles.css">
-
-	<script type="text/javascript">
-	  function ani()
-	  {
-	    if (document.getElementById('sidebar').className == "bar side" || document.getElementById('sidebar').className == 'bar side animOut')
-	    	{
-	    		document.getElementById('sidebar').className ='bar side animIn';
-	    	}
-    	else
-	    	{
-	    		document.getElementById('sidebar').className ='bar side animOut';
-	    	}
-	  }
-	</script>
 </head>
-<body>
-	<div class="bar top">
-		<table class="top">
-			<tr>
-				<td class="pageTitle">
-					<h1>TKBWeb</h1>
-				</td>
-				<td class="topNav">
-					<button type="button" class="btn btn-primary topNavBtn" onclick=window.location.href="Archive/index.html">Archived Site</button>
-					<button type="button" class="btn btn-primary topNavBtn">Personal Background</button>
-					<button type="button" class="btn btn-primary topNavBtn">Code Examples</button>
-					<button type="button" class="btn btn-primary topNavBtn">Programmer Art</button>
-				</td>
-			</tr>
-		</table>
-	</div>
-	<div id="sidebar" class="bar side">
-		<a class="btn btn-lg sideBtn"><img src="images/ArenaLogo.png" class="sideImage"></a>
-		<a class="btn btn-lg sideBtn"><img src="images/CosmicSlingshot.png" class="sideImage"></a>
-		<a class="btn btn-lg sideBtn"><img src="images/GoodMorning.gif" class="sideImage"></a>
-		<a class="btn btn-lg sideBtn"><img src="images/BeginningOfChoice.png" class="sideImage"></a>
-		<a class="btn btn-lg sideBtn"><img src="images/FireFly.png" class="sideImage"></a>
-		<a class="btn btn-lg sideBtn"><img src="images/SCPACLogo.gif" class="sideImage"></a>
-	</div>
-	<div id="includedContent" class="mainContent">
-		<h2 class="constructionText">Temporary Website Construction Text</h2>
-		<p style="color: #EDC12A"> This website is a personal project I am undertaking in order to improve my skills in web development and is currently still a work in progress. For more information about me, visit: <a href="https://tyebryant.itch.io/">https://tyebryant.itch.io</a></p>
-	</div>
-</body>
+	<body>
+		<div class="row pageTitle">
+			<div class="col-sm-9">
+			  <h1>TKBWeb</h1>
+			</div>
+			<button type="button" class="btn btn-primary topNavBtn col">Personal Background</button>
+			<button type="button" class="btn btn-primary topNavBtn col">Code Examples</button>
+			<button type="button" class="btn btn-primary topNavBtn col">Programmer Art</button>
+		</div>
+	  
+	  <!--Sidebar and Content-->
+		<div class="row"">
+			<div class="col-md-2 pageTitle">
+				<div class="scrollbar scrollbar-primary">
+					<div class="force-overflow">
+					
+						<a class="btn" onclick="document.getElementById('mainContent').innerHTML = document.getElementById('AotBK').innerHTML, resetDisplayedImage(aotbkImages, 'aotbkContent')"><img src="images/ArenaLogo.png" class="sideImage"></a>
+						
+						<a class="btn" onclick="document.getElementById('mainContent').innerHTML = document.getElementById('CosmicSlingshot').innerHTML"><img src="images/CosmicSlingshot.png" class="sideImage"></a>
+						
+						<a class="btn" onclick="document.getElementById('mainContent').innerHTML = document.getElementById('GoodMorning').innerHTML, resetDisplayedImage(goodMorningImages, 'goodMorningContent')"><img src="images/GoodMorning.gif" class="sideImage"></a>
+						
+						<a class="btn" onclick="document.getElementById('mainContent').innerHTML = document.getElementById('Firefly').innerHTML, resetDisplayedImage(fireflyImages, 'fireflyContent')"><img src="images/FireFly.png" class="sideImage"></a>
+						
+						<a class="btn" onclick="document.getElementById('mainContent').innerHTML = document.getElementById('BoC').innerHTML, resetDisplayedImage(BoCImages, 'BoCContent')"><img src="images/BeginningOfChoice.png" class="sideImage"></a>
+						
+						<a class="btn"><img src="images/SCPACLogo.gif" class="sideImage"></a>
+						
+					</div>
+				</div>
+			</div> 
+			<div class="col mainContent" id="mainContent">
+				<h2 class="constructionText">Temporary Website Construction Text</h2>
+				<p  style="color: #EDC12A"> This website is a personal project I am undertaking in order to improve my skills in web development and is currently still a work in progress. For more information about me, visit: <a href="https://tyebryant.itch.io/">https://tyebryant.itch.io</a></p>
+			</div>
+		</div>
+		
+		<!--Content to Display-->
+		<div style="display: none">
+			<div id="AotBK">
+				<button type="button" class="btn btn-primary" onclick="incrementDisplayedImage(-1, aotbkImages, 'aotbkContent')"><</button>
+				<img src="" class="mainImage" id="aotbkContent">
+				<button type="button" class="btn btn-primary" onclick="incrementDisplayedImage(1, aotbkImages, 'aotbkContent')">></button>
+				<h2>Arena of the Bored Kings - Lead Programmer - C#</h2>
+				<p>The ‘Arena of the Board Kings’ brings a highly competitive first person, splitscreen, fantasy arena duel experience right to your couch between your friends, family, or even your pets (if they happen to have opposable thumbs and intelligent thinking)! Fight to the whimsical, bitter end with an array of elemental abilities and combinations that will both astonish and annihilate your foes as the explosive and ground-shaking Mage, or the swift and destructive Swordsman. All this just to sate the boredom of two kings so caught up in boredom that they couldn’t even realise they were at war... But who started it? Find out in the Arena of the Bored Kings!</p>
+				<p><a href="https://the-board-devs.itch.io/arena-of-the-bored-kings">Available Here</a></P>
+			</div>
+			
+			<div id="CosmicSlingshot">
+				<img src="https://pbs.twimg.com/media/DlRyW3pUYAAN6LU.jpg:large" class="mainImage portraitImage">
+				<img src="https://pbs.twimg.com/media/DysE59aV4AAQ-ap.jpg:large" class="mainImage portraitImage">
+				<img src="https://pbs.twimg.com/media/DysE6q6U8AAyW1-.jpg:large" class="mainImage portraitImage">
+				<img src="https://pbs.twimg.com/media/DlRyYIvVAAsoyM6.jpg:large" class="mainImage portraitImage">
+				<h2>Cosmic Slingshot - Programmer - C#</h2>
+				<h3>In Development With <a href="https://twitter.com/JacobDuniam">@JacobDuniam</a></h3>
+				<p><!--TODO Add Text For Cosmic Here--></p>
+			</div>
+			
+			<div id="GoodMorning">
+				<button type="button" class="btn btn-primary" onclick="incrementDisplayedImage(-1, goodMorningImages, 'goodMorningContent')"><</button>
+				<img src="" class="mainImage" id="goodMorningContent">
+				<button type="button" class="btn btn-primary" onclick="incrementDisplayedImage(1, goodMorningImages, 'goodMorningContent')">></button>
+				<h2>Good Morning - Lead Programmer - C#</h2>
+				<p>Everybody has their morning routine, it seems almost impossible to start your day without one. Good Morning is all about what you do before you face the world for the day. It aims to nail the aesthetic of early morning, roughly 7AM, using bright and orange colours to put you in that mental timestate so you really feel like this is really you preparing for the day. That game offers a sweet nostalgic feeling by letting the player complete their morning tasks step-by-step, like taking a shower or making some coffee. Good Morning wants you feel like you're in your home doing your thing.</p>
+				<p><a href="https://levistenton.itch.io/good-morning">Available Here</a></p>
+			</div>
+			
+			<div id="BoC">
+				<button type="button" class="btn btn-primary" onclick="incrementDisplayedImage(-1, BoCImages, 'BoCContent')"><</button>
+				<img src="" class="mainImage" id="BoCContent">
+				<button type="button" class="btn btn-primary" onclick="incrementDisplayedImage(1, BoCImages, 'BoCContent')">></button>
+				<h2>Beginning of Choice - Programmer - C#</h2>
+				<p>Choose a character to go along on a journey with you to decide how the game shall end. You will be faced with options that should not be made lightly.</p>
+				<p><a href="https://tyebryant.itch.io/beginning-of-choice">Available Here</a></P>
+			</div>
+			
+			<div id="Firefly">
+				<button type="button" class="btn btn-primary" onclick="incrementDisplayedImage(-1, fireflyImages, 'fireflyContent')"><</button>
+				<img src="" class="mainImage" id="fireflyContent">
+				<button type="button" class="btn btn-primary" onclick="incrementDisplayedImage(1, fireflyImages, 'fireflyContent')">></button>
+				<h2>Firefly - Programmer - C#</h2>
+				<p>Felix the firefly is a flying survival game, based around a train station in the darkest of nights. As the player who controls Felix, you must navigate your way around this train station, dodging humans and obstacles and using your light as a resource to see ahead of you give yourself a speed boost, while also collecting light sources to survive.</p>
+				<p><a href="https://thirra.itch.io/firefly">Available Here</a></P>
+			</div>
+			
+		</div>
+	</body>
 </html>
+
+<script>
+var imageIndex = 0;
+var aotbkImages = new Array
+(
+	"https://img.itch.zone/aW1hZ2UvMjAzNzc4Lzk1MTI2Ni5wbmc=/original/UuyrAL.png",
+	"https://img.itch.zone/aW1hZ2UvMjAzNzc4Lzk1MTI2OC5wbmc=/original/xaH%2Fq9.png",
+	"https://img.itch.zone/aW1hZ2UvMjAzNzc4Lzk1MTI3My5wbmc=/original/sKoGSL.png",
+	"https://img.itch.zone/aW1hZ2UvMjAzNzc4Lzk1MTI3Ny5wbmc=/original/rELACU.png"
+);
+
+var goodMorningImages = new Array
+(
+	"https://img.itch.zone/aW1hZ2UvMTM2ODM1LzYyODc4Ni5naWY=/original/cv35F%2B.gif",
+	"https://img.itch.zone/aW1hZ2UvMTM2ODM1LzYyOTc2OS5wbmc=/original/BEtq1P.png",
+	"https://img.itch.zone/aW1hZ2UvMTM2ODM1LzYyOTg4OS5wbmc=/original/XxQkQ5.png",
+	"https://img.itch.zone/aW1hZ2UvMTM2ODM1LzYyOTg5MC5wbmc=/original/yT6rGf.png",
+	"https://img.itch.zone/aW1hZ2UvMTM2ODM1LzYyOTg5MS5wbmc=/original/YCV8tB.png"
+);
+
+var BoCImages = new Array
+(
+	"https://img.itch.zone/aW1hZ2UvMTM5NTc0LzYzOTE5MS5qcGc=/original/7YdhfT.jpg",
+	"https://img.itch.zone/aW1hZ2UvMTM5NTc0LzYzOTE4Ny5qcGc=/original/eXBhd7.jpg",
+	"https://img.itch.zone/aW1hZ2UvMTM5NTc0LzYzOTE5MC5qcGc=/original/4AlNJf.jpg",
+	"https://img.itch.zone/aW1hZ2UvMTM5NTc0LzYzOTE5MC5qcGc=/original/4AlNJf.jpg",
+	"https://img.itch.zone/aW1hZ2UvMTM5NTc0LzYzOTE5NC5qcGc=/original/Fc3Q8J.jpg"
+);
+
+var fireflyImages = new Array
+(
+	"https://img.itch.zone/aW1hZ2UvMTAxNTIzLzE4MzcyMTcucG5n/original/jLRVR9.png",
+	"https://img.itch.zone/aW1hZ2UvMTAzNzY3LzQ4Mjk5Ni5wbmc=/original/Q5XOMM.png",
+	"https://img.itch.zone/aW1hZ2UvMTAzNzY3LzQ4Mjk5NC5wbmc=/original/JE1GB8.png",
+	"https://img.itch.zone/aW1hZ2UvMTAzNzY3LzQ4Mjk5NS5wbmc=/original/08aatg.png",
+	"https://img.itch.zone/aW1hZ2UvMTAzNzY3LzQ4Mjk5Ny5wbmc=/original/WOGNR9.png"
+	
+);
+
+function incrementDisplayedImage (_incrementValue, _imagesArray, _elementID)
+{
+
+	imageIndex += _incrementValue;
+	
+	if (imageIndex >= _imagesArray.length)
+	{
+		imageIndex = 0;
+	}
+	else if (imageIndex < 0)
+	{
+		imageIndex = _imagesArray.length - 1;
+	}
+	document.getElementById(_elementID).src = _imagesArray[imageIndex];
+}
+
+function resetDisplayedImage (_imagesArray, _elementID)
+{
+
+	imageIndex = 0;
+	document.getElementById(_elementID).src = _imagesArray[imageIndex];
+}
+</script>
