@@ -1,158 +1,418 @@
-<!DOCTYPE html>
-<html>
+<!doctype html>
+<html lang="en">
 <head>
-	<title>TKBWeb</title>
-	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
-	<link rel="stylesheet" type="text/css" href="TKBWebStyles.css">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Tye Bryant · Software &amp; game developer</title>
+  <meta name="description" content="Tye Bryant builds web apps, cloud backends and games: a real-time D&amp;D virtual tabletop, a deduction roguelite for the browser, and the infrastructure that runs them.">
+  <link rel="canonical" href="https://tyekbryant.com/">
+
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://tyekbryant.com/">
+  <meta property="og:title" content="Tye Bryant · Software &amp; game developer">
+  <meta property="og:description" content="Web apps, cloud backends and games: a real-time D&amp;D virtual tabletop, a deduction roguelite for the browser, and the infrastructure that runs them.">
+  <meta property="og:image" content="https://tyekbryant.com/assets/img/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Tye Bryant: software developer who makes games.">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@TyeKBryant">
+
+  <meta name="color-scheme" content="dark light">
+  <meta name="theme-color" content="#0e1014" media="(prefers-color-scheme: dark)">
+  <meta name="theme-color" content="#f7f4ee" media="(prefers-color-scheme: light)">
+  <link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/assets/img/apple-touch-icon.png">
+  <link rel="stylesheet" href="/assets/css/site.css">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Tye Bryant",
+    "url": "https://tyekbryant.com/",
+    "jobTitle": "Software developer",
+    "sameAs": [
+      "https://github.com/TyeBryant",
+      "https://tyebryant.itch.io/",
+      "https://x.com/TyeKBryant"
+    ]
+  }
+  </script>
 </head>
-	<body>
-		<div class="row pageTitle">
-			<div class="col-sm-8">
-			  <h1>TKBWeb</h1>
-			</div>
-			<button type="button" class="btn btn-primary topNavBtn col">Personal Background</button>
-			<button type="button" class="btn btn-primary topNavBtn col">Code Examples</button>
-			<button type="button" class="btn btn-primary topNavBtn col">Programmer Art</button>
-			<button type="button" class="btn btn-primary topNavBtn col" onclick="window.location.href='Archive/index.html'">Archived Site</button>
-		</div>
-	  
-	  <!--Sidebar and Content-->
-		<div class="row"">
-			<div class="col-md-2 pageTitle">
-				<div class="scrollbar scrollbar-primary">
-					<div class="force-overflow">
-					
-						<a class="btn" onclick="document.getElementById('mainContent').innerHTML = document.getElementById('AotBK').innerHTML, resetDisplayedImage(aotbkImages, 'aotbkContent')"><img src="images/ArenaLogo.png" class="sideImage"></a>
-						
-						<a class="btn" onclick="document.getElementById('mainContent').innerHTML = document.getElementById('CosmicSlingshot').innerHTML"><img src="images/CosmicSlingshot.png" class="sideImage"></a>
-						
-						<a class="btn" onclick="document.getElementById('mainContent').innerHTML = document.getElementById('GoodMorning').innerHTML, resetDisplayedImage(goodMorningImages, 'goodMorningContent')"><img src="images/GoodMorning.gif" class="sideImage"></a>
-						
-						<a class="btn" onclick="document.getElementById('mainContent').innerHTML = document.getElementById('Firefly').innerHTML, resetDisplayedImage(fireflyImages, 'fireflyContent')"><img src="images/FireFly.png" class="sideImage"></a>
-						
-						<a class="btn" onclick="document.getElementById('mainContent').innerHTML = document.getElementById('BoC').innerHTML, resetDisplayedImage(BoCImages, 'BoCContent')"><img src="images/BeginningOfChoice.png" class="sideImage"></a>
-						
-						<a class="btn"><img src="images/SCPACLogo.gif" class="sideImage"></a>
-						
-					</div>
-				</div>
-			</div> 
-			<div class="col mainContent" id="mainContent">
-				<h2 class="constructionText">Temporary Website Construction Text</h2>
-				<p  style="color: #EDC12A"> This website is a personal project I am undertaking in order to improve my skills in web development and is currently still a work in progress. For more information about me, visit: <a href="https://tyebryant.itch.io/">https://tyebryant.itch.io</a></p>
-			</div>
-		</div>
-		
-		<!--Content to Display-->
-		<div style="display: none">
-			<div id="AotBK">
-				<button type="button" class="btn btn-primary" onclick="incrementDisplayedImage(-1, aotbkImages, 'aotbkContent')"><</button>
-				<img src="" class="mainImage" id="aotbkContent">
-				<button type="button" class="btn btn-primary" onclick="incrementDisplayedImage(1, aotbkImages, 'aotbkContent')">></button>
-				<h2>Arena of the Bored Kings - Lead Programmer - C#</h2>
-				<p>The ‘Arena of the Board Kings’ brings a highly competitive first person, splitscreen, fantasy arena duel experience right to your couch between your friends, family, or even your pets (if they happen to have opposable thumbs and intelligent thinking)! Fight to the whimsical, bitter end with an array of elemental abilities and combinations that will both astonish and annihilate your foes as the explosive and ground-shaking Mage, or the swift and destructive Swordsman. All this just to sate the boredom of two kings so caught up in boredom that they couldn’t even realise they were at war... But who started it? Find out in the Arena of the Bored Kings!</p>
-				<p><a href="https://the-board-devs.itch.io/arena-of-the-bored-kings">Available Here</a></P>
-			</div>
-			
-			<div id="CosmicSlingshot">
-				<img src="https://pbs.twimg.com/media/DlRyW3pUYAAN6LU.jpg:large" class="mainImage portraitImage">
-				<img src="https://pbs.twimg.com/media/DysE59aV4AAQ-ap.jpg:large" class="mainImage portraitImage">
-				<img src="https://pbs.twimg.com/media/DysE6q6U8AAyW1-.jpg:large" class="mainImage portraitImage">
-				<img src="https://pbs.twimg.com/media/DlRyYIvVAAsoyM6.jpg:large" class="mainImage portraitImage">
-				<h2>Cosmic Slingshot - Programmer - C#</h2>
-				<h3>In Development With <a href="https://twitter.com/JacobDuniam">@JacobDuniam</a></h3>
-				<p><!--TODO Add Text For Cosmic Here--></p>
-			</div>
-			
-			<div id="GoodMorning">
-				<button type="button" class="btn btn-primary" onclick="incrementDisplayedImage(-1, goodMorningImages, 'goodMorningContent')"><</button>
-				<img src="" class="mainImage" id="goodMorningContent">
-				<button type="button" class="btn btn-primary" onclick="incrementDisplayedImage(1, goodMorningImages, 'goodMorningContent')">></button>
-				<h2>Good Morning - Lead Programmer - C#</h2>
-				<p>Everybody has their morning routine, it seems almost impossible to start your day without one. Good Morning is all about what you do before you face the world for the day. It aims to nail the aesthetic of early morning, roughly 7AM, using bright and orange colours to put you in that mental timestate so you really feel like this is really you preparing for the day. That game offers a sweet nostalgic feeling by letting the player complete their morning tasks step-by-step, like taking a shower or making some coffee. Good Morning wants you feel like you're in your home doing your thing.</p>
-				<p><a href="https://levistenton.itch.io/good-morning">Available Here</a></p>
-			</div>
-			
-			<div id="BoC">
-				<button type="button" class="btn btn-primary" onclick="incrementDisplayedImage(-1, BoCImages, 'BoCContent')"><</button>
-				<img src="" class="mainImage" id="BoCContent">
-				<button type="button" class="btn btn-primary" onclick="incrementDisplayedImage(1, BoCImages, 'BoCContent')">></button>
-				<h2>Beginning of Choice - Programmer - C#</h2>
-				<p>Choose a character to go along on a journey with you to decide how the game shall end. You will be faced with options that should not be made lightly.</p>
-				<p><a href="https://tyebryant.itch.io/beginning-of-choice">Available Here</a></P>
-			</div>
-			
-			<div id="Firefly">
-				<button type="button" class="btn btn-primary" onclick="incrementDisplayedImage(-1, fireflyImages, 'fireflyContent')"><</button>
-				<img src="" class="mainImage" id="fireflyContent">
-				<button type="button" class="btn btn-primary" onclick="incrementDisplayedImage(1, fireflyImages, 'fireflyContent')">></button>
-				<h2>Firefly - Programmer - C#</h2>
-				<p>Felix the firefly is a flying survival game, based around a train station in the darkest of nights. As the player who controls Felix, you must navigate your way around this train station, dodging humans and obstacles and using your light as a resource to see ahead of you give yourself a speed boost, while also collecting light sources to survive.</p>
-				<p><a href="https://thirra.itch.io/firefly">Available Here</a></P>
-			</div>
-			
-		</div>
-	</body>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <div class="wrap site-header__inner">
+      <a class="brand" href="/" aria-label="Tye Bryant, home">
+        <img src="/assets/img/favicon.svg" alt="" width="28" height="28">
+        <span>Tye Bryant</span>
+      </a>
+      <nav aria-label="Main">
+        <ul class="nav">
+          <li><a href="#work">Work</a></li>
+          <li><a href="#earlier">Earlier</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="wrap">
+        <p class="eyebrow">Software &amp; game developer</p>
+        <h1 id="hero-title">Tye Bryant</h1>
+        <p class="tagline">I make games, and the software that holds them up.</p>
+        <p class="lede">
+          Web apps, cloud backends and games. Lately that's a real-time virtual tabletop for my
+          D&amp;D group, a deduction roguelite for the browser, and the infrastructure to run it
+          all for a few dollars a month. I started out in Unity and C#; these days I'm just as
+          likely to be in TypeScript, .NET, Godot or a CloudFormation template.
+        </p>
+        <p class="hero__actions">
+          <a class="button" href="#work">See the work</a>
+          <a class="button button--ghost" href="mailto:tye@tyekbryant.com">Get in touch</a>
+        </p>
+
+        <!-- Decorative: a half-solved scan grid. Numbers are real neighbour counts. -->
+        <div class="hero__board" aria-hidden="true">
+          <span class="r z"></span><span class="r">1</span><span class="r">1</span><span class="r">1</span><span></span><span></span>
+          <span class="r z"></span><span class="r">1</span><span class="f"></span><span class="r">1</span><span></span><span></span>
+          <span class="r z"></span><span class="r">1</span><span class="r">1</span><span class="r hi">2</span><span class="c"></span><span></span>
+          <span class="r">1</span><span class="r">1</span><span class="r">1</span><span></span><span></span><span></span>
+          <span></span><span></span><span></span><span></span><span></span><span></span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ───────────────────────── Selected work ───────────────────────── -->
+    <section id="work" class="section" aria-labelledby="work-title">
+      <div class="wrap">
+        <header class="section__head">
+          <p class="section__label">01</p>
+          <h2 id="work-title">Selected work</h2>
+        </header>
+
+        <!-- Hull Breach -->
+        <article class="project" aria-labelledby="hb-title">
+          <div class="project__media project__media--phones">
+            <img src="/assets/img/hull-breach-title.webp" width="480" height="853" loading="lazy"
+                 alt="Hull Breach title screen with Daily, Endless, Tutorial and Upgrades buttons.">
+            <img src="/assets/img/hull-breach-deck.webp" width="480" height="853" loading="lazy"
+                 alt="A deck mid-run: a grid of revealed scan values and hidden metal tiles, with the O2 and charge bars above and the hazard manifest below.">
+            <img src="/assets/img/hull-breach-tutorial.webp" width="480" height="853" loading="lazy"
+                 alt="The tutorial explaining that every deck hides one reactor core, and that you tap threats on purpose to drain them.">
+          </div>
+          <div class="project__body">
+            <p class="project__meta">Game · Godot · In development</p>
+            <h3 id="hb-title">Hull Breach</h3>
+            <p>
+              A portrait, touch-first deduction roguelite for the browser. Each run descends
+              through the decks of a derelict station. Every deck is a hidden grid where revealed
+              tiles show the total threat around them, and a manifest lists exactly what's out
+              there. Clearing safe tiles doesn't win: you hunt down the reactor core and drain
+              threats on purpose.
+            </p>
+            <ul class="project__points">
+              <li>Every board is generated with a solver guarantee, so no deck ever forces a guess.</li>
+              <li>A pure-Python generator and solver is the reference oracle; the GDScript port is
+                checked against it board-for-board in CI.</li>
+              <li>Seeded daily runs and an endless mode, with upgrades bought between runs.</li>
+              <li>Azure Pipelines exports the web build, holds it to a download-size budget and
+                ships it to itch.io with butler.</li>
+            </ul>
+            <ul class="tags" aria-label="Built with">
+              <li>Godot 4</li><li>GDScript</li><li>Python</li><li>Azure Pipelines</li><li>HTML5</li>
+            </ul>
+          </div>
+        </article>
+
+        <!-- GoobDoob VTT -->
+        <article class="project project--flip" aria-labelledby="vtt-title">
+          <figure class="project__media project__media--art">
+            <svg class="vtt-art" viewBox="0 0 480 360" role="img"
+                 aria-labelledby="vtt-art-title">
+              <title id="vtt-art-title">Illustration of a battle map: a party of tokens, a hand-drawn arrow, and a spell's area template highlighting the grid squares it covers.</title>
+              <defs>
+                <pattern id="vtt-grid" width="40" height="40" patternUnits="userSpaceOnUse">
+                  <path d="M40 0H0V40" class="vtt-art__grid"/>
+                </pattern>
+                <marker id="vtt-arrow" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse">
+                  <path d="M0 0L10 5L0 10z" class="vtt-art__ink-fill"/>
+                </marker>
+              </defs>
+              <rect width="480" height="360" class="vtt-art__floor"/>
+              <rect width="480" height="360" fill="url(#vtt-grid)"/>
+              <!-- walls -->
+              <path d="M40 40H440V320H280M200 320H40V40" class="vtt-art__wall"/>
+              <path d="M360 40V160M360 240V320" class="vtt-art__wall"/>
+              <!-- squares caught in the template: centres within 2 squares of (240,160) -->
+              <g class="vtt-art__aoe-cell">
+                <rect x="200" y="80" width="40" height="40"/><rect x="240" y="80" width="40" height="40"/>
+                <rect x="160" y="120" width="40" height="40"/><rect x="200" y="120" width="40" height="40"/>
+                <rect x="240" y="120" width="40" height="40"/><rect x="280" y="120" width="40" height="40"/>
+                <rect x="160" y="160" width="40" height="40"/><rect x="200" y="160" width="40" height="40"/>
+                <rect x="240" y="160" width="40" height="40"/><rect x="280" y="160" width="40" height="40"/>
+                <rect x="200" y="200" width="40" height="40"/><rect x="240" y="200" width="40" height="40"/>
+              </g>
+              <circle cx="240" cy="160" r="80" class="vtt-art__aoe"/>
+              <circle cx="240" cy="160" r="4" class="vtt-art__aoe-dot"/>
+              <!-- freehand arrow -->
+              <path d="M112 262C134 250 140 228 160 222S196 214 204 196" class="vtt-art__ink" marker-end="url(#vtt-arrow)"/>
+              <!-- enemy tokens -->
+              <g class="vtt-art__token vtt-art__token--foe">
+                <circle cx="220" cy="140" r="15"/><circle cx="260" cy="180" r="15"/><circle cx="300" cy="140" r="15"/>
+              </g>
+              <!-- party tokens -->
+              <g class="vtt-art__token vtt-art__token--ally">
+                <circle cx="100" cy="260" r="15"/><circle cx="60" cy="300" r="15"/><circle cx="140" cy="300" r="15"/>
+              </g>
+              <circle cx="100" cy="260" r="20" class="vtt-art__selected"/>
+              <!-- HP bar on the selected token -->
+              <rect x="82" y="231" width="36" height="5" rx="2.5" class="vtt-art__hp-bg"/>
+              <rect x="82" y="231" width="25" height="5" rx="2.5" class="vtt-art__hp"/>
+            </svg>
+            <figcaption>An illustration. The real thing lives behind a login.</figcaption>
+          </figure>
+          <div class="project__body">
+            <p class="project__meta">Web app · AWS · In use since 2024</p>
+            <h3 id="vtt-title">GoobDoob VTT</h3>
+            <p>
+              A custom virtual tabletop for a homebrew D&amp;D 5e campaign. It replaced a shared
+              Excalidraw board with something that actually understands the campaign's rules.
+            </p>
+            <ul class="project__points">
+              <li>A shared, real-time battle map: tokens with HP, freehand drawing, and a library of
+                60-odd spell area templates that snap to the grid.</li>
+              <li>Character sheets import straight from D&amp;D Beyond PDFs, and their roll buttons
+                broadcast to a shared roll feed.</li>
+              <li>A dual-sheet character model for the campaign's timeline-rewind lore, kept in
+                lockstep between TypeScript on the client and C# on the server.</li>
+              <li>A session archive with read-aloud recaps, player notes and searchable lore.</li>
+              <li>Serverless on AWS, sized to run for under AU$2 a month.</li>
+            </ul>
+            <ul class="tags" aria-label="Built with">
+              <li>React</li><li>TypeScript</li><li>.NET 10</li><li>AWS Lambda</li>
+              <li>WebSockets</li><li>DynamoDB</li><li>Cognito</li><li>CloudFormation</li><li>three.js</li>
+            </ul>
+          </div>
+        </article>
+
+        <!-- Game-server relay -->
+        <article class="project" aria-labelledby="relay-title">
+          <figure class="project__media project__media--art">
+            <svg class="relay-art" viewBox="0 0 400 360" role="img" aria-labelledby="relay-art-title">
+              <title id="relay-art-title">Diagram: players connect to a small AWS relay; the home PC opens an outbound tunnel to the relay, which carries their traffic back to the game server at home.</title>
+              <defs>
+                <marker id="relay-arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+                  <path d="M0 0L10 5L0 10z" class="relay-art__arrowhead"/>
+                </marker>
+                <marker id="relay-arrow-accent" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+                  <path d="M0 0L10 5L0 10z" class="relay-art__arrowhead--accent"/>
+                </marker>
+              </defs>
+
+              <rect x="85" y="14" width="230" height="54" rx="10" class="relay-art__box"/>
+              <text x="200" y="38" class="relay-art__title">Players</text>
+              <text x="200" y="56" class="relay-art__sub">anywhere on the internet</text>
+
+              <path d="M200 70V128" class="relay-art__line" marker-end="url(#relay-arrow)"/>
+              <text x="212" y="104" class="relay-art__note" text-anchor="start">game traffic</text>
+
+              <rect x="60" y="134" width="280" height="76" rx="10" class="relay-art__box relay-art__box--cloud"/>
+              <text x="200" y="160" class="relay-art__title">AWS relay</text>
+              <text x="200" y="179" class="relay-art__sub">EC2 t4g.nano · Elastic IP</text>
+              <text x="200" y="196" class="relay-art__sub">Route 53 record · rathole server</text>
+
+              <path d="M150 272V216" class="relay-art__line relay-art__line--tunnel" marker-end="url(#relay-arrow-accent)"/>
+              <text x="138" y="248" class="relay-art__note relay-art__note--accent" text-anchor="end">home dials out</text>
+              <path d="M250 216V272" class="relay-art__line" marker-end="url(#relay-arrow)"/>
+              <text x="262" y="248" class="relay-art__note" text-anchor="start">tunnelled back</text>
+
+              <rect x="60" y="278" width="280" height="68" rx="10" class="relay-art__box"/>
+              <text x="200" y="304" class="relay-art__title">Home PC</text>
+              <text x="200" y="323" class="relay-art__sub">dedicated server · rathole client</text>
+              <text x="200" y="339" class="relay-art__sub">self-hosted pipeline agent</text>
+            </svg>
+          </figure>
+          <div class="project__body">
+            <p class="project__meta">Infrastructure · AWS · Azure DevOps</p>
+            <h3 id="relay-title">Home game-server relay</h3>
+            <p>
+              Hosting a dedicated game server from a home PC, without port forwarding, a static IP,
+              or paying for a game-sized cloud machine. A tiny ARM instance on AWS takes the public
+              traffic; the home machine dials out to it, and the tunnel carries players back home.
+            </p>
+            <ul class="project__points">
+              <li>The home PC opens the rathole tunnel outbound, so the router needs no open ports.</li>
+              <li>The relay is one CloudFormation stack: instance, Elastic IP, security group and
+                DNS record.</li>
+              <li>Azure Pipelines deploys the stack and, through a self-hosted agent on the home box,
+                installs and updates the game server itself.</li>
+              <li>An idempotent PowerShell bootstrap means a replacement machine is one script away.</li>
+            </ul>
+            <ul class="tags" aria-label="Built with">
+              <li>AWS EC2</li><li>CloudFormation</li><li>Route 53</li><li>rathole</li>
+              <li>Azure Pipelines</li><li>PowerShell</li>
+            </ul>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- ───────────────────────── Earlier work ───────────────────────── -->
+    <section id="earlier" class="section" aria-labelledby="earlier-title">
+      <div class="wrap">
+        <header class="section__head">
+          <p class="section__label">02</p>
+          <h2 id="earlier-title">Earlier work</h2>
+          <p class="section__intro">
+            Team projects from my time at SAE Creative Media Institute, 2017–2019.
+            All Unity and C#, and all still playable on itch.io.
+          </p>
+        </header>
+
+        <ul class="cards">
+          <li class="card">
+            <img src="/assets/img/arena-of-the-bored-kings.webp" width="960" height="540" loading="lazy" alt="">
+            <div class="card__body">
+              <h3><a href="https://the-board-devs.itch.io/arena-of-the-bored-kings">Arena of the Bored Kings</a></h3>
+              <p class="card__role">Lead programmer</p>
+              <p>Split-screen, first-person arena duels on the couch, as a Mage or a Swordsman with
+                elemental abilities that combine.</p>
+            </div>
+          </li>
+          <li class="card">
+            <img src="/assets/img/good-morning.webp" width="960" height="540" loading="lazy" alt="">
+            <div class="card__body">
+              <h3><a href="https://levistenton.itch.io/good-morning">Good Morning</a></h3>
+              <p class="card__role">Lead programmer</p>
+              <p>A slow, warm game about a morning routine: shower, coffee, step by step, in the
+                orange light of 7&nbsp;a.m.</p>
+            </div>
+          </li>
+          <li class="card">
+            <img src="/assets/img/firefly.webp" width="960" height="540" loading="lazy" alt="">
+            <div class="card__body">
+              <h3><a href="https://tyebryant.itch.io/firefly">Firefly</a></h3>
+              <p class="card__role">Programmer</p>
+              <p>Fly Felix the firefly through a train station at night, spending your light to see
+                and to boost, and collecting more to survive.</p>
+            </div>
+          </li>
+          <li class="card">
+            <img src="/assets/img/beginning-of-choice.webp" width="960" height="540" loading="lazy" alt="">
+            <div class="card__body">
+              <h3><a href="https://tyebryant.itch.io/beginning-of-choice">Beginning of Choice</a></h3>
+              <p class="card__role">Programmer &amp; designer</p>
+              <p>A short story game: pick a companion and make the choices that decide how it ends.</p>
+            </div>
+          </li>
+        </ul>
+
+        <p class="also">
+          Also from that era, on GitHub:
+          <a href="https://github.com/TyeBryant/MaxKB">Killbots</a>, competing AI agents in C++, and
+          <a href="https://github.com/TyeBryant/Unity-Scoreboard">Unity Scoreboard</a>, a
+          drop-in CSV-backed high-score table.
+        </p>
+      </div>
+    </section>
+
+    <!-- ───────────────────────── About ───────────────────────── -->
+    <section id="about" class="section" aria-labelledby="about-title">
+      <div class="wrap">
+        <header class="section__head">
+          <p class="section__label">03</p>
+          <h2 id="about-title">About</h2>
+        </header>
+
+        <div class="about">
+          <div class="about__text">
+            <p>
+              I came up through games. At SAE I built a handful of small Unity projects with
+              student teams, usually as the programmer making the systems underneath hang together.
+            </p>
+            <p>
+              Since then I've followed that into the rest of the stack: real-time networking,
+              serverless backends, infrastructure as code and the pipelines that ship it. I like
+              software that's cheap to run, easy to redeploy, and pleasant for the people using it.
+            </p>
+            <p>
+              Away from the keyboard (well, mostly) there's a long-running homebrew D&amp;D campaign,
+              which is how a virtual tabletop ended up at the top of this page.
+            </p>
+          </div>
+
+          <dl class="skills">
+            <div>
+              <dt>Languages</dt>
+              <dd>C# · TypeScript · GDScript · Python · C++ · PowerShell</dd>
+            </div>
+            <div>
+              <dt>Web</dt>
+              <dd>React · Vite · WebSockets · HTML &amp; CSS</dd>
+            </div>
+            <div>
+              <dt>Cloud &amp; DevOps</dt>
+              <dd>AWS (Lambda, API Gateway, DynamoDB, S3, CloudFront, EC2, Cognito, Route 53) ·
+                CloudFormation · Azure Pipelines</dd>
+            </div>
+            <div>
+              <dt>Games</dt>
+              <dd>Unity · Godot · procedural generation · web exports</dd>
+            </div>
+          </dl>
+        </div>
+      </div>
+    </section>
+
+    <!-- ───────────────────────── Contact ───────────────────────── -->
+    <section id="contact" class="section" aria-labelledby="contact-title">
+      <div class="wrap">
+        <header class="section__head">
+          <p class="section__label">04</p>
+          <h2 id="contact-title">Say hello</h2>
+          <p class="section__intro">A project, a question, or a game you want to talk about. Email is best.</p>
+        </header>
+
+        <ul class="contact">
+          <li>
+            <a href="mailto:tye@tyekbryant.com">
+              <span class="contact__label">Email</span>
+              <span class="contact__value">tye@tyekbryant.com</span>
+            </a>
+          </li>
+          <li>
+            <a href="https://github.com/TyeBryant">
+              <span class="contact__label">GitHub</span>
+              <span class="contact__value">TyeBryant</span>
+            </a>
+          </li>
+          <li>
+            <a href="https://tyebryant.itch.io/">
+              <span class="contact__label">itch.io</span>
+              <span class="contact__value">tyebryant</span>
+            </a>
+          </li>
+          <li>
+            <a href="https://x.com/TyeKBryant">
+              <span class="contact__label">X</span>
+              <span class="contact__value">@TyeKBryant</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <p>© Tye Bryant. Hand-written HTML and CSS, no framework, no build step.</p>
+    </div>
+  </footer>
+</body>
 </html>
-
-<script>
-var imageIndex = 0;
-var aotbkImages = new Array
-(
-	"https://img.itch.zone/aW1hZ2UvMjAzNzc4Lzk1MTI2Ni5wbmc=/original/UuyrAL.png",
-	"https://img.itch.zone/aW1hZ2UvMjAzNzc4Lzk1MTI2OC5wbmc=/original/xaH%2Fq9.png",
-	"https://img.itch.zone/aW1hZ2UvMjAzNzc4Lzk1MTI3My5wbmc=/original/sKoGSL.png",
-	"https://img.itch.zone/aW1hZ2UvMjAzNzc4Lzk1MTI3Ny5wbmc=/original/rELACU.png"
-);
-
-var goodMorningImages = new Array
-(
-	"https://img.itch.zone/aW1hZ2UvMTM2ODM1LzYyODc4Ni5naWY=/original/cv35F%2B.gif",
-	"https://img.itch.zone/aW1hZ2UvMTM2ODM1LzYyOTc2OS5wbmc=/original/BEtq1P.png",
-	"https://img.itch.zone/aW1hZ2UvMTM2ODM1LzYyOTg4OS5wbmc=/original/XxQkQ5.png",
-	"https://img.itch.zone/aW1hZ2UvMTM2ODM1LzYyOTg5MC5wbmc=/original/yT6rGf.png",
-	"https://img.itch.zone/aW1hZ2UvMTM2ODM1LzYyOTg5MS5wbmc=/original/YCV8tB.png"
-);
-
-var BoCImages = new Array
-(
-	"https://img.itch.zone/aW1hZ2UvMTM5NTc0LzYzOTE5MS5qcGc=/original/7YdhfT.jpg",
-	"https://img.itch.zone/aW1hZ2UvMTM5NTc0LzYzOTE4Ny5qcGc=/original/eXBhd7.jpg",
-	"https://img.itch.zone/aW1hZ2UvMTM5NTc0LzYzOTE5MC5qcGc=/original/4AlNJf.jpg",
-	"https://img.itch.zone/aW1hZ2UvMTM5NTc0LzYzOTE5MC5qcGc=/original/4AlNJf.jpg",
-	"https://img.itch.zone/aW1hZ2UvMTM5NTc0LzYzOTE5NC5qcGc=/original/Fc3Q8J.jpg"
-);
-
-var fireflyImages = new Array
-(
-	"https://img.itch.zone/aW1hZ2UvMTAxNTIzLzE4MzcyMTcucG5n/original/jLRVR9.png",
-	"https://img.itch.zone/aW1hZ2UvMTAzNzY3LzQ4Mjk5Ni5wbmc=/original/Q5XOMM.png",
-	"https://img.itch.zone/aW1hZ2UvMTAzNzY3LzQ4Mjk5NC5wbmc=/original/JE1GB8.png",
-	"https://img.itch.zone/aW1hZ2UvMTAzNzY3LzQ4Mjk5NS5wbmc=/original/08aatg.png",
-	"https://img.itch.zone/aW1hZ2UvMTAzNzY3LzQ4Mjk5Ny5wbmc=/original/WOGNR9.png"
-	
-);
-
-function incrementDisplayedImage (_incrementValue, _imagesArray, _elementID)
-{
-
-	imageIndex += _incrementValue;
-	
-	if (imageIndex >= _imagesArray.length)
-	{
-		imageIndex = 0;
-	}
-	else if (imageIndex < 0)
-	{
-		imageIndex = _imagesArray.length - 1;
-	}
-	document.getElementById(_elementID).src = _imagesArray[imageIndex];
-}
-
-function resetDisplayedImage (_imagesArray, _elementID)
-{
-
-	imageIndex = 0;
-	document.getElementById(_elementID).src = _imagesArray[imageIndex];
-}
-</script>
