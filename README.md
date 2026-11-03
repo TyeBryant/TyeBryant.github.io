@@ -1,10 +1,16 @@
 # tyekbryant.com
 
-Personal site for Tye Bryant: software developer who makes games.
+Personal site for Tye Bryant: senior software developer who also makes games.
 Served by GitHub Pages from `master`, on the custom domain in `CNAME`.
 
 The 2019 version was built at 3am to learn Bootstrap and cope with insomnia. This one is
 plain HTML and CSS: no framework, no build step, no JavaScript.
+
+## Layout rule: full width
+
+No max-width wrapper and no centred column, on purpose. Content runs edge to edge with a small
+gutter (`--gutter`), grids stretch to fill the row, and the root font size grows with the viewport
+so line lengths stay readable on big screens. Don't add a `max-width` to text or sections.
 
 ## Layout
 
@@ -26,11 +32,14 @@ python -m http.server 8000
 # then open http://localhost:8000
 ```
 
-## Adding or updating a project
+## Keeping it up to date
 
-- **Featured project:** copy one of the `<article class="project">` blocks in `index.html`.
+- **Job or role change:** edit the `<article class="job">` blocks in `index.html`, the hero text, and
+  `jobTitle`/`worksFor` in the JSON-LD block in the `<head>`. Source of truth is the current resume.
+- **Don't publish** the phone number, referee contact details or clearance details from the resume.
+- **Project:** copy one of the `<article class="project">` blocks.
   Add `project--flip` to alternate the image side on desktop.
-- **Earlier work card:** copy an `<li class="card">` block. Covers are 16:9; 960×540 WebP
+- **Earlier game card:** copy an `<li class="card">` block. Covers are 16:9; 960×540 WebP
   keeps them sharp on high-DPI screens without being heavy.
 - **Images:** keep them in `assets/img/` as WebP, and always set `width`/`height` on the
   `<img>` so the layout doesn't jump while they load.

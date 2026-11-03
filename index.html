@@ -3,18 +3,18 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Tye Bryant · Software &amp; game developer</title>
-  <meta name="description" content="Tye Bryant builds web apps, cloud backends and games: a real-time D&amp;D virtual tabletop, a deduction roguelite for the browser, and the infrastructure that runs them.">
+  <title>Tye Bryant · Senior software developer</title>
+  <meta name="description" content="Tye Bryant is a senior software developer in Brisbane, building AWS integration platforms for EV fast chargers at Tritium, and games and a D&amp;D virtual tabletop on the side.">
   <link rel="canonical" href="https://tyekbryant.com/">
 
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://tyekbryant.com/">
-  <meta property="og:title" content="Tye Bryant · Software &amp; game developer">
-  <meta property="og:description" content="Web apps, cloud backends and games: a real-time D&amp;D virtual tabletop, a deduction roguelite for the browser, and the infrastructure that runs them.">
+  <meta property="og:title" content="Tye Bryant · Senior software developer">
+  <meta property="og:description" content="AWS integration platforms for EV fast chargers at Tritium, and games and a D&amp;D virtual tabletop on the side.">
   <meta property="og:image" content="https://tyekbryant.com/assets/img/og-image.png">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
-  <meta property="og:image:alt" content="Tye Bryant: software developer who makes games.">
+  <meta property="og:image:alt" content="Tye Bryant: I build cloud platforms for EV chargers, and games for fun.">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:site" content="@TyeKBryant">
 
@@ -31,8 +31,15 @@
     "@type": "Person",
     "name": "Tye Bryant",
     "url": "https://tyekbryant.com/",
-    "jobTitle": "Software developer",
+    "jobTitle": "Senior Software Developer",
+    "worksFor": { "@type": "Organization", "name": "Tritium" },
+    "address": { "@type": "PostalAddress", "addressLocality": "Brisbane", "addressRegion": "QLD", "addressCountry": "AU" },
+    "alumniOf": [
+      { "@type": "CollegeOrUniversity", "name": "The University of Queensland" },
+      { "@type": "CollegeOrUniversity", "name": "SAE Institute Australia" }
+    ],
     "sameAs": [
+      "https://www.linkedin.com/in/tye-bryant-805752136",
       "https://github.com/TyeBryant",
       "https://tyebryant.itch.io/",
       "https://x.com/TyeKBryant"
@@ -51,8 +58,9 @@
       </a>
       <nav aria-label="Main">
         <ul class="nav">
-          <li><a href="#work">Work</a></li>
-          <li><a href="#earlier">Earlier</a></li>
+          <li><a href="#experience">Experience</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#games">Games</a></li>
           <li><a href="#about">About</a></li>
           <li><a href="#contact">Contact</a></li>
         </ul>
@@ -62,20 +70,23 @@
 
   <main id="main">
     <section class="hero" aria-labelledby="hero-title">
-      <div class="wrap">
-        <p class="eyebrow">Software &amp; game developer</p>
-        <h1 id="hero-title">Tye Bryant</h1>
-        <p class="tagline">I make games, and the software that holds them up.</p>
-        <p class="lede">
-          Web apps, cloud backends and games. Lately that's a real-time virtual tabletop for my
-          D&amp;D group, a deduction roguelite for the browser, and the infrastructure to run it
-          all for a few dollars a month. I started out in Unity and C#; these days I'm just as
-          likely to be in TypeScript, .NET, Godot or a CloudFormation template.
-        </p>
-        <p class="hero__actions">
-          <a class="button" href="#work">See the work</a>
-          <a class="button button--ghost" href="mailto:tye@tyekbryant.com">Get in touch</a>
-        </p>
+      <div class="wrap hero__grid">
+        <div class="hero__text">
+          <p class="eyebrow">Senior software developer · Brisbane, Australia</p>
+          <h1 id="hero-title">Tye Bryant</h1>
+          <p class="tagline">I build cloud platforms for EV chargers, and games for fun.</p>
+          <p class="lede">
+            I've spent eight years in industry, going from small multiplayer games to mobile AR to
+            enterprise integrations. At Tritium I work on the AWS platform that processes, stores
+            and surfaces data from thousands of fast chargers out in the field. On my own time I'm
+            still making games, along with a D&amp;D virtual tabletop and the infrastructure to run
+            them for a few dollars a month.
+          </p>
+          <p class="hero__actions">
+            <a class="button" href="#experience">See my work</a>
+            <a class="button button--ghost" href="mailto:tye@tyekbryant.com">Get in touch</a>
+          </p>
+        </div>
 
         <!-- Decorative: a half-solved scan grid. Numbers are real neighbour counts. -->
         <div class="hero__board" aria-hidden="true">
@@ -88,12 +99,115 @@
       </div>
     </section>
 
-    <!-- ───────────────────────── Selected work ───────────────────────── -->
-    <section id="work" class="section" aria-labelledby="work-title">
+    <!-- ───────────────────────── Experience ───────────────────────── -->
+    <section id="experience" class="section" aria-labelledby="experience-title">
       <div class="wrap">
         <header class="section__head">
           <p class="section__label">01</p>
-          <h2 id="work-title">Selected work</h2>
+          <h2 id="experience-title">Experience</h2>
+        </header>
+
+        <div class="jobs">
+          <article class="job" aria-labelledby="job-tritium">
+            <h3 id="job-tritium">Tritium</h3>
+            <p class="job__org">EV fast-charger manufacturer, now part of Exicom · Brisbane</p>
+            <ul class="job__roles">
+              <li><span class="job__role">Senior Software Developer</span><span class="job__dates">Jul 2026 – present</span></li>
+              <li><span class="job__role">Application Software Engineer</span><span class="job__dates">Aug 2022 – Jul 2026</span></li>
+            </ul>
+            <ul class="points">
+              <li>Core contributor to the charger data and integration platform: 500+ C# microservices
+                on AWS Lambda across three environments, serving customers, field engineers and
+                internal business systems.</li>
+              <li>Leading the migration of Salesforce, NetSuite, Power BI and Grafana reporting onto
+                Databricks, having contributed to the early design of the data lake and analytics
+                platform.</li>
+              <li>Built auditable compliance solutions for German Eichrecht and US CTEP metrology
+                regulation, working with the Compliance team to satisfy government assessors.</li>
+              <li>Design and build REST APIs on API Gateway, with API-key and custom authoriser
+                authentication, for internal and external consumers.</li>
+              <li>Build and maintain the CI/CD pipelines and CloudFormation templates that keep every
+                environment reproducible as infrastructure as code.</li>
+              <li>Integrated NetSuite and Salesforce with the charger platform, and shipped an internal
+                IT ticketing system and a UWP charger-diagnostics app.</li>
+              <li>Weigh cost, performance and scalability trade-offs for new capabilities and present
+                recommendations to engineering leadership and executives.</li>
+              <li>Run QA and code reviews, and mentor engineers across Software Engineering and Data
+                Analytics.</li>
+            </ul>
+            <ul class="tags" aria-label="Technologies">
+              <li>C# / .NET</li><li>AWS Lambda</li><li>API Gateway</li><li>SQS / SNS / SES</li>
+              <li>RDS</li><li>CloudFormation</li><li>Databricks</li><li>NetSuite</li><li>Salesforce</li>
+            </ul>
+          </article>
+
+          <article class="job" aria-labelledby="job-ardacious">
+            <h3 id="job-ardacious">Ardacious</h3>
+            <p class="job__org">
+              <a href="https://ardacious.com">Games and augmented-reality studio</a>, formerly 89Friends · Brisbane
+            </p>
+            <ul class="job__roles">
+              <li><span class="job__role">Senior Programmer (contract)</span><span class="job__dates">Jul 2019 – Mar 2023</span></li>
+              <li><span class="job__role">Contract Programmer</span><span class="job__dates">Jun 2018 – Jul 2019</span></li>
+              <li><span class="job__role">Programming Intern</span><span class="job__dates">Aug – Dec 2017</span></li>
+            </ul>
+            <ul class="points">
+              <li>Led development of Ardent Roleplay, a 3D augmented-reality tabletop product, and its
+                companion desktop app, across mobile, desktop, Tilt Five and HoloLens. It was Highly
+                Commended in the AR category at the 2021 Qld XR Festival.</li>
+              <li>Designed and ran the PostgreSQL staging and production databases and the services
+                around them: Xsolla payments, server-side validators, Mautic, REST APIs and custom web
+                tooling.</li>
+              <li>Designed a C# socket-based publish/subscribe message queue for cross-device play, and
+                a Firebase Cloud Messaging push solution for distributed sessions.</li>
+              <li>Built the asset pipeline tooling 3D artists used to author, bundle and host AR content,
+                with Vuforia, Unity and Firebase Storage.</li>
+            </ul>
+            <ul class="tags" aria-label="Technologies">
+              <li>C#</li><li>Unity</li><li>PostgreSQL</li><li>Vuforia</li><li>HoloLens</li>
+              <li>Tilt Five</li><li>Firebase</li><li>Xsolla</li>
+            </ul>
+          </article>
+        </div>
+
+        <h3 class="quotes__title">Recommendations</h3>
+        <div class="quotes">
+          <figure class="quote">
+            <blockquote>
+              Tye is a brilliant and innovative professional who comfortably straddles Software
+              Engineering, Solutions Architecture and Systems Design with an easygoing, can-do
+              attitude. Tye has excelled in his mentoring of other professionals, whether they're in
+              his discipline or not.
+            </blockquote>
+            <figcaption>
+              <strong>Aidan Memery</strong>
+              <span>Data Architecture Specialist, Accenture · via LinkedIn, October 2026</span>
+            </figcaption>
+          </figure>
+          <figure class="quote">
+            <blockquote>
+              I've worked with Tye for some years now, and I highly recommend him as a Programmer.
+              Since he started working at Ardacious (then 89Friends) as an intern, he's grown
+              significantly as a programmer and as a professional, acquiring a large amount of skills
+              in the time I've worked with him. Tye is a focused and skilled programmer and would be a
+              valuable addition to any project.
+            </blockquote>
+            <figcaption>
+              <strong>Caleb Barton</strong>
+              <span>C# Developer, managed Tye directly · via LinkedIn, July 2022</span>
+            </figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- ───────────────────────── Projects ───────────────────────── -->
+    <section id="projects" class="section" aria-labelledby="projects-title">
+      <div class="wrap">
+        <header class="section__head">
+          <p class="section__label">02</p>
+          <h2 id="projects-title">Projects</h2>
+          <p class="section__intro">Things I build on my own time.</p>
         </header>
 
         <!-- Hull Breach -->
@@ -116,7 +230,7 @@
               there. Clearing safe tiles doesn't win: you hunt down the reactor core and drain
               threats on purpose.
             </p>
-            <ul class="project__points">
+            <ul class="points">
               <li>Every board is generated with a solver guarantee, so no deck ever forces a guess.</li>
               <li>A pure-Python generator and solver is the reference oracle; the GDScript port is
                 checked against it board-for-board in CI.</li>
@@ -133,65 +247,29 @@
         <!-- GoobDoob VTT -->
         <article class="project project--flip" aria-labelledby="vtt-title">
           <figure class="project__media project__media--art">
-            <svg class="vtt-art" viewBox="0 0 480 360" role="img"
-                 aria-labelledby="vtt-art-title">
-              <title id="vtt-art-title">Illustration of a battle map: a party of tokens, a hand-drawn arrow, and a spell's area template highlighting the grid squares it covers.</title>
-              <defs>
-                <pattern id="vtt-grid" width="40" height="40" patternUnits="userSpaceOnUse">
-                  <path d="M40 0H0V40" class="vtt-art__grid"/>
-                </pattern>
-                <marker id="vtt-arrow" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse">
-                  <path d="M0 0L10 5L0 10z" class="vtt-art__ink-fill"/>
-                </marker>
-              </defs>
-              <rect width="480" height="360" class="vtt-art__floor"/>
-              <rect width="480" height="360" fill="url(#vtt-grid)"/>
-              <!-- walls -->
-              <path d="M40 40H440V320H280M200 320H40V40" class="vtt-art__wall"/>
-              <path d="M360 40V160M360 240V320" class="vtt-art__wall"/>
-              <!-- squares caught in the template: centres within 2 squares of (240,160) -->
-              <g class="vtt-art__aoe-cell">
-                <rect x="200" y="80" width="40" height="40"/><rect x="240" y="80" width="40" height="40"/>
-                <rect x="160" y="120" width="40" height="40"/><rect x="200" y="120" width="40" height="40"/>
-                <rect x="240" y="120" width="40" height="40"/><rect x="280" y="120" width="40" height="40"/>
-                <rect x="160" y="160" width="40" height="40"/><rect x="200" y="160" width="40" height="40"/>
-                <rect x="240" y="160" width="40" height="40"/><rect x="280" y="160" width="40" height="40"/>
-                <rect x="200" y="200" width="40" height="40"/><rect x="240" y="200" width="40" height="40"/>
-              </g>
-              <circle cx="240" cy="160" r="80" class="vtt-art__aoe"/>
-              <circle cx="240" cy="160" r="4" class="vtt-art__aoe-dot"/>
-              <!-- freehand arrow -->
-              <path d="M112 262C134 250 140 228 160 222S196 214 204 196" class="vtt-art__ink" marker-end="url(#vtt-arrow)"/>
-              <!-- enemy tokens -->
-              <g class="vtt-art__token vtt-art__token--foe">
-                <circle cx="220" cy="140" r="15"/><circle cx="260" cy="180" r="15"/><circle cx="300" cy="140" r="15"/>
-              </g>
-              <!-- party tokens -->
-              <g class="vtt-art__token vtt-art__token--ally">
-                <circle cx="100" cy="260" r="15"/><circle cx="60" cy="300" r="15"/><circle cx="140" cy="300" r="15"/>
-              </g>
-              <circle cx="100" cy="260" r="20" class="vtt-art__selected"/>
-              <!-- HP bar on the selected token -->
-              <rect x="82" y="231" width="36" height="5" rx="2.5" class="vtt-art__hp-bg"/>
-              <rect x="82" y="231" width="25" height="5" rx="2.5" class="vtt-art__hp"/>
-            </svg>
-            <figcaption>An illustration. The real thing lives behind a login.</figcaption>
+            <img src="/assets/img/vtt-world-map.webp" width="925" height="577" loading="lazy"
+                 alt="The VTT's world map panel: floating islands of different biomes linked by faint travel lines, on a dark starfield, titled The World of GoobDoob.">
+            <figcaption>The campaign's 3D world map, from the live app.</figcaption>
           </figure>
           <div class="project__body">
-            <p class="project__meta">Web app · AWS · In use since 2024</p>
+            <p class="project__meta">Web app · AWS · In use since 2026</p>
             <h3 id="vtt-title">GoobDoob VTT</h3>
             <p>
-              A custom virtual tabletop for a homebrew D&amp;D 5e campaign. It replaced a shared
-              Excalidraw board with something that actually understands the campaign's rules.
+              A custom virtual tabletop for the homebrew D&amp;D 5e campaign I run. It replaced a
+              shared Excalidraw board with something that actually understands the campaign's rules.
             </p>
-            <ul class="project__points">
-              <li>A shared, real-time battle map: tokens with HP, freehand drawing, and a library of
-                60-odd spell area templates that snap to the grid.</li>
+            <ul class="points">
+              <li>A shared, real-time battle map: tokens with HP, freehand drawing on separate DM,
+                shared and player layers, and a library of 60-odd spell area templates that snap to
+                the grid.</li>
               <li>Character sheets import straight from D&amp;D Beyond PDFs, and their roll buttons
                 broadcast to a shared roll feed.</li>
               <li>A dual-sheet character model for the campaign's timeline-rewind lore, kept in
                 lockstep between TypeScript on the client and C# on the server.</li>
-              <li>A session archive with read-aloud recaps, player notes and searchable lore.</li>
+              <li>The whole campaign lives here too: a zoomable world map with private pins, party
+                and loot tracking, and lore with per-player visibility.</li>
+              <li>Every session opens with a &ldquo;Previously on&hellip;&rdquo; recap, backed by an
+                archive of read-aloud recaps, player notes and search.</li>
               <li>Serverless on AWS, sized to run for under AU$2 a month.</li>
             </ul>
             <ul class="tags" aria-label="Built with">
@@ -246,7 +324,7 @@
               or paying for a game-sized cloud machine. A tiny ARM instance on AWS takes the public
               traffic; the home machine dials out to it, and the tunnel carries players back home.
             </p>
-            <ul class="project__points">
+            <ul class="points">
               <li>The home PC opens the rathole tunnel outbound, so the router needs no open ports.</li>
               <li>The relay is one CloudFormation stack: instance, Elastic IP, security group and
                 DNS record.</li>
@@ -263,15 +341,15 @@
       </div>
     </section>
 
-    <!-- ───────────────────────── Earlier work ───────────────────────── -->
-    <section id="earlier" class="section" aria-labelledby="earlier-title">
+    <!-- ───────────────────────── Earlier games ───────────────────────── -->
+    <section id="games" class="section" aria-labelledby="games-title">
       <div class="wrap">
         <header class="section__head">
-          <p class="section__label">02</p>
-          <h2 id="earlier-title">Earlier work</h2>
+          <p class="section__label">03</p>
+          <h2 id="games-title">Earlier games</h2>
           <p class="section__intro">
-            Team projects from my time at SAE Creative Media Institute, 2017–2019.
-            All Unity and C#, and all still playable on itch.io.
+            Small-team Unity projects from around my games degree at SAE Institute, circa 2017.
+            All still up on itch.io.
           </p>
         </header>
 
@@ -315,7 +393,7 @@
 
         <p class="also">
           Also from that era, on GitHub:
-          <a href="https://github.com/TyeBryant/MaxKB">Killbots</a>, competing AI agents in C++, and
+          <a href="https://github.com/TyeBryant/MaxKB">Killbots</a>, a C++ AI project, and
           <a href="https://github.com/TyeBryant/Unity-Scoreboard">Unity Scoreboard</a>, a
           drop-in CSV-backed high-score table.
         </p>
@@ -326,46 +404,76 @@
     <section id="about" class="section" aria-labelledby="about-title">
       <div class="wrap">
         <header class="section__head">
-          <p class="section__label">03</p>
+          <p class="section__label">04</p>
           <h2 id="about-title">About</h2>
         </header>
 
         <div class="about">
           <div class="about__text">
             <p>
-              I came up through games. At SAE I built a handful of small Unity projects with
-              student teams, usually as the programmer making the systems underneath hang together.
+              I come from a games programming background: a Bachelor of Games Development at SAE,
+              then an internship at 89Friends that turned into nearly five years of contract work,
+              including leading an augmented-reality tabletop product. That work is what pulled me
+              towards databases, payments and backend services.
             </p>
             <p>
-              Since then I've followed that into the rest of the stack: real-time networking,
-              serverless backends, infrastructure as code and the pipelines that ship it. I like
-              software that's cheap to run, easy to redeploy, and pleasant for the people using it.
+              A Graduate Certificate in Computer Science at UQ filled in the low-level side, from
+              kernel development to compilers and concurrency. Since 2022 I've been at Tritium,
+              working between engineering, product and executives on how the platform should grow:
+              what it costs, how it performs, and what it takes to satisfy a regulator.
             </p>
             <p>
-              Away from the keyboard (well, mostly) there's a long-running homebrew D&amp;D campaign,
-              which is how a virtual tabletop ended up at the top of this page.
+              Outside work it's still games, plus the homebrew D&amp;D campaign I run, which is how a
+              virtual tabletop ended up on this page. I like software that's cheap to run, easy to redeploy
+              and pleasant for the people using it.
             </p>
           </div>
 
           <dl class="skills">
             <div>
               <dt>Languages</dt>
-              <dd>C# · TypeScript · GDScript · Python · C++ · PowerShell</dd>
-            </div>
-            <div>
-              <dt>Web</dt>
-              <dd>React · Vite · WebSockets · HTML &amp; CSS</dd>
+              <dd>C# / .NET · TypeScript · Python · C / C++ · GDScript · PowerShell · Bash</dd>
             </div>
             <div>
               <dt>Cloud &amp; DevOps</dt>
-              <dd>AWS (Lambda, API Gateway, DynamoDB, S3, CloudFront, EC2, Cognito, Route 53) ·
-                CloudFormation · Azure Pipelines</dd>
+              <dd>AWS (Lambda, API Gateway, EC2, EFS, RDS, DynamoDB, SQS, SNS, SES, S3, CloudFront,
+                Cognito, Route 53) · CloudFormation · CI/CD · Docker</dd>
             </div>
             <div>
-              <dt>Games</dt>
-              <dd>Unity · Godot · procedural generation · web exports</dd>
+              <dt>Data &amp; integration</dt>
+              <dd>PostgreSQL · Databricks · Power BI · Grafana · NetSuite · Salesforce · REST APIs</dd>
+            </div>
+            <div>
+              <dt>Web</dt>
+              <dd>React · Vite · Django · WebSockets</dd>
+            </div>
+            <div>
+              <dt>Games &amp; XR</dt>
+              <dd>Unity · Godot · Vuforia · HoloLens · Tilt Five</dd>
             </div>
           </dl>
+
+          <div class="education">
+            <h3>Education &amp; community</h3>
+            <ul>
+              <li>
+                <strong>Graduate Certificate in Computer Science</strong>
+                <span>The University of Queensland, 2020</span>
+              </li>
+              <li>
+                <strong>Bachelor of Games Development (Programming)</strong>
+                <span>SAE Institute Australia, 2016–2017</span>
+              </li>
+              <li>
+                <strong>UQ Cyber Security Student Society</strong>
+                <span>Vice President 2022, Infrastructure Officer 2021</span>
+              </li>
+              <li>
+                <strong>Global Cybersecurity Camp 2021</strong>
+                <span>Selected participant, hosted virtually by AIS3</span>
+              </li>
+            </ul>
+          </div>
         </div>
       </div>
     </section>
@@ -374,9 +482,12 @@
     <section id="contact" class="section" aria-labelledby="contact-title">
       <div class="wrap">
         <header class="section__head">
-          <p class="section__label">04</p>
+          <p class="section__label">05</p>
           <h2 id="contact-title">Say hello</h2>
-          <p class="section__intro">A project, a question, or a game you want to talk about. Email is best.</p>
+          <p class="section__intro">
+            Brisbane-based Australian citizen, interested in solution design roles. Also happy to talk
+            about a project, a question or a game. Email is best.
+          </p>
         </header>
 
         <ul class="contact">
@@ -384,6 +495,12 @@
             <a href="mailto:tye@tyekbryant.com">
               <span class="contact__label">Email</span>
               <span class="contact__value">tye@tyekbryant.com</span>
+            </a>
+          </li>
+          <li>
+            <a href="https://www.linkedin.com/in/tye-bryant-805752136">
+              <span class="contact__label">LinkedIn</span>
+              <span class="contact__value">tye-bryant</span>
             </a>
           </li>
           <li>
