@@ -9,15 +9,21 @@ plain HTML and CSS: no framework, no build step, no JavaScript.
 ## Layout rule: full width
 
 No max-width wrapper and no centred column, on purpose. Content runs edge to edge with a small
-gutter (`--gutter`), grids stretch to fill the row, and the root font size grows with the viewport
-so line lengths stay readable on big screens. Don't add a `max-width` to text or sections.
+gutter (`--gutter`), grids stretch to fill the row, and very wide screens get more columns rather
+than longer lines. Don't centre a column or wrap the page in a `max-width`.
+
+## Size rule
+
+Everything is in `rem` and type does not grow with the viewport. `html { font-size }` at the top of
+`site.css` is the one dial for the whole site. Check changes at the owner's real screen too:
+about 2575 CSS px wide at 150% scaling.
 
 ## Layout
 
 ```
 index.html            the whole site, one page
 404.html              GitHub Pages serves this for any missing path
-assets/css/site.css   all styles; colour tokens at the top (dark default, light via prefers-color-scheme)
+assets/css/site.css   all styles; colour tokens at the top (dark for everyone)
 assets/img/           WebP screenshots/covers, favicon.svg, apple-touch-icon.png, og-image.png
 CNAME                 tyekbryant.com
 .nojekyll             skip Jekyll; the files are served as-is

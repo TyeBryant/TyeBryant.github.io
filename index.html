@@ -18,9 +18,8 @@
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:site" content="@TyeKBryant">
 
-  <meta name="color-scheme" content="dark light">
-  <meta name="theme-color" content="#0e1014" media="(prefers-color-scheme: dark)">
-  <meta name="theme-color" content="#f7f4ee" media="(prefers-color-scheme: light)">
+  <meta name="color-scheme" content="dark">
+  <meta name="theme-color" content="#0e1014">
   <link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="/assets/img/apple-touch-icon.png">
   <link rel="stylesheet" href="/assets/css/site.css">
@@ -79,8 +78,8 @@
             I've spent eight years in industry, going from small multiplayer games to mobile AR to
             enterprise integrations. At Tritium I work on the AWS platform that processes, stores
             and surfaces data from thousands of fast chargers out in the field. On my own time I'm
-            still making games, along with a D&amp;D virtual tabletop and the infrastructure to run
-            them for a few dollars a month.
+            building Wizard, a voxel game where you write your own spells by hand, along with a
+            D&amp;D virtual tabletop and the infrastructure to run it for a few dollars a month.
           </p>
           <p class="hero__actions">
             <a class="button" href="#experience">See my work</a>
@@ -207,8 +206,80 @@
         <header class="section__head">
           <p class="section__label">02</p>
           <h2 id="projects-title">Projects</h2>
-          <p class="section__intro">Things I build on my own time.</p>
+          <p class="section__intro">
+            Things I build on my own time. They're also where I'm exploring AI-assisted development:
+            most of this work is done with AI coding agents, with me setting the design and direction.
+          </p>
         </header>
+
+        <!-- Wizard -->
+        <article class="project" aria-labelledby="wizard-title">
+          <figure class="project__media project__media--art">
+            <img src="/assets/img/wizard-island-fold.webp" width="1600" height="818" loading="lazy"
+                 alt="A whole island of earth and rock hanging in the air over a turquoise sea, just arrived through a shimmering white and violet ring, with terraced hills behind.">
+            <figcaption>An island carried through a fold written by hand. Captured from real play.</figcaption>
+          </figure>
+          <div class="project__body">
+            <p class="project__meta">Game · Unity · In development</p>
+              <h3 id="wizard-title">Wizard</h3>
+              <p>
+                My current project: a generated voxel world built around a procedural magic system.
+                There's no spell list. A spell is a small program: you draw its shape in the air, write
+                runes on it by hand, and the world answers through the same laws it runs on for
+                everything else. Nothing is locked behind a level, so any spell can be cast from minute
+                one if you're clever and patient enough.
+              </p>
+              <ul class="points">
+              <li>Draw a line, ring or sphere and write on it. A recogniser reads your runes, and the
+                geometry is the program: where a rune sits decides how it runs.</li>
+              <li>Mana has no pool, only how fast you can channel it, and the cost taxes waste rather
+                than sophistication. A tight, clever spell is cheap; a sprawling one bleeds.</li>
+              <li>Folds through space, frost, heat beams and a whole island lifted by a ritual all come
+                from one rune grammar, not a list of scripted effects.</li>
+              <li>Fine voxels over simulated laws for heat, water and matter, with a seeded solar system
+                driving the sky and the calendar.</li>
+              <li>Every body, the caster included, is simulated anatomy: flesh, bone, wounds and a gait
+                solver. Figures, creatures, world and magic are all procedural, with no modelled art.</li>
+              <li>The magic engine is pure C# with no Unity references, enforced by the compiler, so its
+                laws run headless under <code>dotnet test</code>. The project has over 6,000 tests.</li>
+            </ul>
+            <ul class="tags" aria-label="Built with">
+                <li>Unity 6</li><li>C#</li><li>URP</li><li>Burst</li><li>.NET</li><li>Procedural generation</li>
+              </ul>
+          </div>
+          <ul class="stills">
+            <li>
+              <img src="/assets/img/wizard-draw.webp" width="960" height="491" loading="lazy"
+                   alt="Close over the caster's shoulder: a ring of small beads drawn in the air above a dirt path, with runes being written on it.">
+              <span>Drawing a ring and writing on it</span>
+            </li>
+            <li>
+              <img src="/assets/img/wizard-fold.webp" width="960" height="491" loading="lazy"
+                   alt="A shimmering white and violet ring hanging over a field, showing a different patch of landscape through it.">
+              <span>A fold through space</span>
+            </li>
+            <li>
+              <img src="/assets/img/wizard-frost.webp" width="960" height="491" loading="lazy"
+                   alt="The caster on a grassy shore as frost spreads out across a blue lake.">
+              <span>Freezing a lake from the shore</span>
+            </li>
+            <li>
+              <img src="/assets/img/wizard-beam.webp" width="960" height="491" loading="lazy"
+                   alt="At dusk, a bright beam fires from a small rune circle into a tree, throwing sparks, with a village behind it.">
+              <span>A heat beam at dusk</span>
+            </li>
+            <li>
+              <img src="/assets/img/wizard-ritual.webp" width="960" height="491" loading="lazy"
+                   alt="Seen from above, the caster stands inside huge rings and runes traced into desert sand.">
+              <span>A ritual walked into the sand</span>
+            </li>
+            <li>
+              <img src="/assets/img/wizard-island.webp" width="960" height="491" loading="lazy"
+                   alt="A great bowl of earth hovering above a crater in the desert, with the sea beyond.">
+              <span>The island it raises</span>
+            </li>
+          </ul>
+        </article>
 
         <!-- Hull Breach -->
         <article class="project" aria-labelledby="hb-title">
@@ -528,7 +599,7 @@
 
   <footer class="site-footer">
     <div class="wrap">
-      <p>© Tye Bryant. Hand-written HTML and CSS, no framework, no build step.</p>
+      <p>© Tye Bryant. Plain HTML and CSS, no framework, no build step.</p>
     </div>
   </footer>
 </body>
