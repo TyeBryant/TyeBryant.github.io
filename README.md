@@ -14,8 +14,9 @@ than longer lines. Don't centre a column or wrap the page in a `max-width`.
 
 ## Size rule
 
-Everything is in `rem` and type does not grow with the viewport. `html { font-size }` at the top of
-`site.css` is the one dial for the whole site. Check changes at the owner's real screen too:
+Everything is in `rem` and body type does not grow with the viewport. Headings and the hero may scale,
+but always up to a hard `rem` cap. `html { font-size }` at the top of `site.css` is the one dial for the
+whole site. Check changes at the owner's real screen too:
 about 2575 CSS px wide at 150% scaling.
 
 ## Layout

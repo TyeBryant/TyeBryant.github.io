@@ -5,8 +5,9 @@
    Layout rule: FULL WIDTH. No max-width wrapper and no centred column. Content runs edge to
    edge with a small gutter, and very wide screens get more columns rather than longer lines.
 
-   Size rule: everything is in rem and type does NOT grow with the viewport (it made the whole
-   site huge on a 2575px-wide screen). `html { font-size }` below is the one dial for the site. */
+   Size rule: everything is in rem and body type does NOT grow with the viewport (it made the whole
+   site huge on a 2575px-wide screen). Headings and the hero may scale, but always up to a hard rem
+   cap. `html { font-size }` below is the one dial for the site. */
 
 /* ── Tokens ─────────────────────────────────────────────────────────── */
 :root {
@@ -121,14 +122,27 @@ code { font: 500 0.9em var(--font-mono); }
 /* ── Hero ───────────────────────────────────────────────────────────── */
 .hero {
   position: relative; overflow: hidden;
-  padding-block: clamp(2.5rem, 5vw, 4.5rem) clamp(2rem, 4vw, 3.5rem);
+  padding-block: clamp(3rem, 6vw, 5.5rem) clamp(2.5rem, 5vw, 4.5rem);
+  background:
+    radial-gradient(55rem 26rem at 8% 30%, rgb(242 182 48 / 0.15), transparent 70%),
+    radial-gradient(45rem 28rem at 92% 60%, rgb(124 200 248 / 0.09), transparent 70%);
 }
 .hero::before {
-  content: ""; position: absolute; inset: -40% -10% auto auto;
-  width: min(900px, 120vw); aspect-ratio: 1;
-  background: radial-gradient(closest-side, var(--glow), transparent 70%);
-  pointer-events: none;
+  content: ""; position: absolute; inset: 0; pointer-events: none;
+  background-image:
+    linear-gradient(var(--border) 1px, transparent 1px),
+    linear-gradient(90deg, var(--border) 1px, transparent 1px);
+  background-size: 3.5rem 3.5rem;
+  opacity: 0.4;
+  -webkit-mask-image: linear-gradient(90deg, transparent 40%, #000 100%);
+  mask-image: linear-gradient(90deg, transparent 40%, #000 100%);
 }
+.hero::after {
+  content: ""; position: absolute; inset: auto 0 0 0; height: 2px; pointer-events: none;
+  background: linear-gradient(90deg, var(--accent), transparent 65%);
+}
+/* The grid only exists to sit behind the board, which is hidden below 1100px */
+@media (max-width: 1099px) { .hero::before { display: none; } }
 .hero__grid { position: relative; display: grid; gap: 2rem; align-items: center; }
 
 .eyebrow, .section__label, .project__meta, .card__role, .contact__label, .skills dt, .education h3, .job__dates {
@@ -136,16 +150,47 @@ code { font: 500 0.9em var(--font-mono); }
   font-size: 0.72rem; letter-spacing: 0.06em; text-transform: uppercase;
 }
 .eyebrow { color: var(--accent); margin-bottom: 0.7rem; }
+.hero .eyebrow { display: flex; align-items: center; gap: 0.6rem; font-size: 0.8rem; margin-bottom: 0.9rem; }
+.hero .eyebrow::before { content: ""; flex: none; width: 2rem; height: 2px; background: var(--accent); }
+@media (max-width: 620px) { .hero .eyebrow::before { display: none; } } /* the line wraps here */
 
-.hero h1 { font-size: clamp(2.25rem, 3.6vw, 3.5rem); font-weight: 750; letter-spacing: -0.03em; }
-.tagline {
-  margin: 0.4rem 0 0.9rem;
-  font-size: clamp(1.1rem, 1.5vw, 1.5rem); line-height: 1.25; font-weight: 500;
-  color: var(--muted); letter-spacing: -0.01em;
+.hero h1 {
+  width: fit-content; padding: 0 0.06em 0.08em 0; /* room for the gradient to reach the y's tail */
+  font-size: clamp(3rem, 5.5vw, 5.5rem); line-height: 1.05; font-weight: 800; letter-spacing: -0.035em;
+  color: var(--accent);
+  filter: drop-shadow(0 0 1.75rem rgb(242 182 48 / 0.22));
 }
-.lede { color: var(--muted); max-width: 95ch; }
+@supports ((-webkit-background-clip: text) or (background-clip: text)) {
+  .hero h1 {
+    background: linear-gradient(100deg, #ffe7a3 0%, var(--accent) 50%, #ee8f2c 100%);
+    -webkit-background-clip: text; background-clip: text;
+    color: transparent;
+  }
+}
+.tagline {
+  margin: 0.45rem 0 1rem;
+  font-size: clamp(1.4rem, 2.2vw, 2.25rem); line-height: 1.2; font-weight: 600;
+  color: var(--text); letter-spacing: -0.015em;
+}
+.tagline em { font-style: normal; color: var(--accent); }
+.lede {
+  font-size: clamp(1.0625rem, 1.25vw, 1.3125rem); line-height: 1.5;
+  color: #c6cad2; max-width: 105ch;
+}
+.lede strong { font-weight: 600; color: var(--text); }
 
-.hero__actions { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-top: 1.25rem; }
+.hero__actions { display: flex; flex-wrap: wrap; gap: 0.6rem; margin-top: 1.6rem; }
+.hero__actions .button { min-height: 44px; padding: 0.5rem 1.35rem; font-size: 0.9375rem; }
+.hero__actions .button:not(.button--ghost) { box-shadow: 0 0.4rem 1.5rem -0.3rem rgb(242 182 48 / 0.55); }
+.hero__actions .button--ghost { background: rgb(255 255 255 / 0.03); }
+
+/* One short entrance on load; the reduced-motion block at the end of this file turns it off */
+@keyframes hero-rise { from { opacity: 0; transform: translateY(0.75rem); } }
+.hero__text > * { animation: hero-rise 0.6s cubic-bezier(0.2, 0.7, 0.2, 1) both; }
+.hero__text > :nth-child(2) { animation-delay: 0.06s; }
+.hero__text > :nth-child(3) { animation-delay: 0.12s; }
+.hero__text > :nth-child(4) { animation-delay: 0.18s; }
+.hero__text > :nth-child(5) { animation-delay: 0.24s; }
 
 .button {
   display: inline-flex; align-items: center; justify-content: center;
@@ -163,7 +208,7 @@ code { font: 500 0.9em var(--font-mono); }
 @media (min-width: 1100px) {
   .hero__grid { grid-template-columns: minmax(0, 1fr) auto; gap: clamp(2rem, 4vw, 5rem); }
   .hero__board {
-    --tile: clamp(2.25rem, 2.6vw, 3.5rem);
+    --tile: clamp(2.5rem, 3.2vw, 4.25rem);
     justify-self: end; margin-right: clamp(0.5rem, 2vw, 3rem);
     display: grid; grid-template-columns: repeat(6, var(--tile)); gap: calc(var(--tile) * 0.13);
     transform: perspective(1100px) rotateX(22deg) rotateZ(-9deg);
